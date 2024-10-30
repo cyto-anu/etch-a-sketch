@@ -8,6 +8,9 @@ body {
     margin-top: 40px;
     font-size: 40px;
     margin-bottom: 50px;
+    width: 600px;
+    display: flex;
+
 }
 
 .container {
@@ -22,13 +25,11 @@ body {
 
 }
 .newDiv {
-    outline: 1px solid black;
-    background-color: gray;
-
+    outline: 1px solid rgba(89, 89, 89, 0.104);
 }
 
-/* have to calculate width
+button {
+    align-self: center;
+    margin-left: auto;
 
-width of each div:
-
-input 2 = 4 boxes. width container width/2
+}

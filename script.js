@@ -1,10 +1,9 @@
 const container = document.querySelector(".container");
 
-
-//creates and appends square number of divs:
+//creates and appends square number of divs and sets width of divs:
 function makeDivs(number) {
 
-    if (number <= 30) {
+    if (number <= 100) {
 
         let containerWidth = 600;
 
@@ -14,11 +13,26 @@ function makeDivs(number) {
             newDiv.style.width = containerWidth/number + "px";
             container.appendChild(newDiv);
         };
+        const newDivs = document.querySelectorAll(".newDiv");
+
+        newDivs.forEach((div) => {
+            div.addEventListener("mouseover", ()=> {
+            div.style.backgroundColor = "black";
+    });
+});
+
     } else {
         console.log("too many divs!");
     }
 };
 
+makeDivs(50);
 
+//function to change size and delete previous etch
+const sizeBtn = document.querySelector("button");
 
-makeDivs(10);
+sizeBtn.addEventListener("click", ()=> {
+    const userInput = prompt("please input number of boxes");
+    container.replaceChildren();
+    makeDivs(userInput);
+});
